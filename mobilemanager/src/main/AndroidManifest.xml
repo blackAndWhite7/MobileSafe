@@ -14,6 +14,7 @@
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.VIBRATE" />
+    <!-- 在window上添加控件，使这个控件始终在window最前面 -->
     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
     <!-- 拦截来电的权限 -->
     <uses-permission android:name="android.permission.CALL_PHONE" />
@@ -137,7 +138,18 @@
         <!-- 如果你没有设置这个属性为true时，打开最近列表中，会显示WatchDogActivity所在的应用图标，跳转到该应用时会弹出解锁界面，所以不能让它在最近列表里显示 -->
         <activity android:name=".activity.ExpandableListViewActivity" />
         <activity android:name=".activity.DrawerActivity" />
-        <activity android:name=".activity.Drawer2Activity"></activity>
+        <activity android:name=".activity.Drawer2Activity" />
+        <activity android:name=".activity.RocketActivity" />
+
+        <service
+            android:name=".service.RocketService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity android:name=".activity.BackGroundActivity"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:launchMode="singleInstance">
+        </activity>
     </application>
 
 </manifest>
