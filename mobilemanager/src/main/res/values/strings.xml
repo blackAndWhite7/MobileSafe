@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">手机管家</string>
+    <string name="sample_device_admin_description">获取权限</string>
+    <string name="sample_device_admin">Admin</string>
+</resources>

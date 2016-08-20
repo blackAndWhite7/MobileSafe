@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.project.wei.mobilemanager.activity.SettingActivity">
+    <!-- ScrollView : 只能有一个子控件 -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <!-- layout_gravity : 设置控件在父控件中的位置
+            gravity : 设置控件内的内容的位置
+            layout_marginTop : 距离某控件的距com.project.wei.mobilesafe离
+            paddingTop : 距离控件内边框的距离,距离textview控件内顶边框的距离
+       -->
+
+        <TextView
+            style="@style/mystyle"
+            android:text="设置中心" />
+
+        <com.project.wei.mobilemanager.ui.SettingView
+            android:id="@+id/sv_setting_update"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:des_off="关闭提示更新"
+            app:des_on="打开提示更新"
+            app:headline="提示更新">
+        </com.project.wei.mobilemanager.ui.SettingView>
+
+        <com.project.wei.mobilemanager.ui.SettingView
+            android:id="@+id/sv_setting_address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:des_off="关闭号码归属地"
+            app:des_on="打开号码归属地"
+            app:headline="号码归属地">
+        </com.project.wei.mobilemanager.ui.SettingView>
+
+        <com.project.wei.mobilemanager.ui.SettingView
+            android:id="@+id/sv_setting_blacknum"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:des_off="关闭黑名单拦截"
+            app:des_on="打开黑名单拦截"
+            app:headline="黑名单拦截">
+        </com.project.wei.mobilemanager.ui.SettingView>
+
+        <com.project.wei.mobilemanager.ui.SettingClickView
+            android:id="@+id/scv_setting_changedbg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        </com.project.wei.mobilemanager.ui.SettingClickView>
+
+        <com.project.wei.mobilemanager.ui.SettingClickView
+            android:id="@+id/scv_setting_location"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        </com.project.wei.mobilemanager.ui.SettingClickView>
+
+        <com.project.wei.mobilemanager.ui.SettingView
+            android:id="@+id/sv_setting_watchdog"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:des_off="关闭软件锁"
+            app:des_on="打开软件锁"
+            app:headline="软件锁">
+        </com.project.wei.mobilemanager.ui.SettingView>
+
+    </LinearLayout>
+</ScrollView>

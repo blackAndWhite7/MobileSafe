@@ -1,0 +1,58 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+    <!-- <TextView
+        android:id="@+id/textView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="设置中心"
+        android:background="#8866ff00"
+        android:gravity="center_horizontal"
+        android:textSize="22sp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        />-->
+    <style name="mystyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">#8866ff00</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:textSize">30sp</item>
+        <item name="android:padding">5dp</item>
+    </style>
+
+    <style name="pre">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:text">上一步</item>
+        <item name="android:layout_alignParentLeft">true</item>
+        <item name="android:layout_alignParentBottom">true</item>
+        <item name="android:background">@drawable/btn_pre_next</item>
+        <item name="android:drawableLeft">@drawable/previous</item>
+        <item name="android:padding">5dp</item>
+        <item name="android:onClick">pre</item>
+    </style>
+
+    <style name="next">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:text">下一步</item>
+        <item name="android:layout_alignParentRight">true</item>
+        <item name="android:layout_alignParentBottom">true</item>
+        <item name="android:background">@drawable/btn_pre_next</item>
+        <item name="android:drawableRight">@drawable/next</item>
+        <item name="android:padding">5dp</item>
+        <item name="android:onClick">next</item>
+    </style>
+    <style name="widget_text">
+        <item name="android:textSize">16.0dip</item>
+        <item name="android:textColor">@color/textColorPrimaryDark</item>
+    </style>
+
+</resources>

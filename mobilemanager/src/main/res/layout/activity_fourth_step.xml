@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.project.wei.mobilemanager.activity.FourthStepActivity">
+
+    <TextView
+        style="@style/mystyle"
+        android:text="4.恭喜您,设置完成"
+        />
+
+    <CheckBox
+        android:id="@+id/cb_fourthstep_protect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:text="你没有开启防盗保护"
+        android:textSize="15sp"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="激活超级管理员权限"
+        android:background="@drawable/btn_select_contact"
+        android:onClick="activeAdmin"
+        />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="注销超级管理员权限"
+        android:background="@drawable/btn_select_contact"
+        android:onClick="cancleAdmin"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@android:drawable/presence_invisible"
+            />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@android:drawable/presence_invisible"
+            />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@android:drawable/presence_invisible"
+            />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@android:drawable/presence_online"
+            />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+        <!-- layout_centerInParent : 在父控件的中间位置 -->
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/phone"
+            android:layout_centerInParent="true"
+            />
+        <!-- layout_alignParentRight : 在父控件的右方
+        layout_alignParentBottom : 在父控件的下方
+        padding : 距离控件上下左右内边框的距离
+                   要想将样式文件中的属性的值覆盖,在控件中使用相同的属性,并设置值就可以
+        -->
+        <Button
+            style="@style/next"
+            android:text="设置完成"
+            android:drawableRight="@null"
+            />
+        <Button
+            style="@style/pre"
+            />
+    </RelativeLayout>
+
+</LinearLayout>
