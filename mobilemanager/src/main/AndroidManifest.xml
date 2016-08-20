@@ -149,6 +149,7 @@
         <activity android:name=".activity.BackGroundActivity"
             android:theme="@android:style/Theme.Translucent.NoTitleBar"
             android:launchMode="singleInstance">
+            <!---->
         </activity>
     </application>
 
