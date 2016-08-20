@@ -146,11 +146,12 @@
             android:enabled="true"
             android:exported="true" />
 
-        <activity android:name=".activity.BackGroundActivity"
-            android:theme="@android:style/Theme.Translucent.NoTitleBar"
-            android:launchMode="singleInstance">
-            <!---->
-        </activity>
+        <activity
+            android:name=".activity.BackGroundActivity"
+            android:launchMode="singleInstance"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity android:name=".activity.AntivirusActivity" />
+        <activity android:name=".activity.ClearCacheActivity"></activity>
     </application>
 
 </manifest>

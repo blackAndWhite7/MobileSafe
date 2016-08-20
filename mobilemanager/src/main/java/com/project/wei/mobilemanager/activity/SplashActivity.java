@@ -76,7 +76,8 @@ public class SplashActivity extends AppCompatActivity {
                 };
             }.start();
         }
-        copyDB();
+        copyDB("address.db");
+        copyDB("antivirus.db");
         //创建快捷方式
         shortCut();
     }
@@ -101,10 +102,10 @@ public class SplashActivity extends AppCompatActivity {
         }
     }
 
-    private void copyDB() {
+    private void copyDB(String dbname) {
         InputStream inputStream = null;
         FileOutputStream outputStream = null;
-        File file = new File(getFilesDir(),"address.db");
+        File file = new File(getFilesDir(),dbname);
         //判断文件是否存在
         if (!file.exists()) {
             //从assets目录中将数据库读取出来
@@ -112,7 +113,7 @@ public class SplashActivity extends AppCompatActivity {
             AssetManager assets = getAssets();
             try {
                 //2.读取数据库
-                inputStream = assets.open("address.db");
+                inputStream = assets.open(dbname);
                 //写入流
                 outputStream = new FileOutputStream(file);
                 //3.读写操作

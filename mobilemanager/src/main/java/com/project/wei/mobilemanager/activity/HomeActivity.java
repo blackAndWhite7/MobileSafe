@@ -60,6 +60,12 @@ public class HomeActivity extends AppCompatActivity {
                     case 4:
                         startActivity(new Intent(HomeActivity.this,RocketActivity.class));
                         break;
+                    case 5:
+                        startActivity(new Intent(HomeActivity.this,AntivirusActivity.class));
+                        break;
+                    case 6:
+                        startActivity(new Intent(HomeActivity.this,ClearCacheActivity.class));
+                        break;
                     case 7:
                         startActivity(new Intent(HomeActivity.this,AToolsActivity.class));
                         break;
