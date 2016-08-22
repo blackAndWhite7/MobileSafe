@@ -10,20 +10,20 @@
         android:text="联系人"
         />
     <FrameLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ListView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-        <ListView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:id="@+id/lv_contactslist_contacts">
-        </ListView>
-        <ProgressBar
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/pb_contactslist_plan"
-            android:layout_gravity="center"
-            android:indeterminateDrawable="@drawable/progressbar_style"/>
-    </FrameLayout>
+        android:layout_height="match_parent"
+        android:id="@+id/lv_contactslist_contacts">
+    </ListView>
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/pb_contactslist_plan"
+        android:layout_gravity="center"
+        android:indeterminateDrawable="@drawable/progressbar_style"/>
+</FrameLayout>
 
 
 </LinearLayout>

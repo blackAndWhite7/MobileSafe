@@ -70,8 +70,7 @@ public class HomeActivity extends AppCompatActivity {
                         startActivity(new Intent(HomeActivity.this,AToolsActivity.class));
                         break;
                     case 8://设置中心
-                        Intent intent = new Intent(HomeActivity.this,SettingActivity.class);
-                        startActivity(intent);
+                        startActivity(new Intent(HomeActivity.this,SettingActivity.class)) ;
                         break;
                 }
             }

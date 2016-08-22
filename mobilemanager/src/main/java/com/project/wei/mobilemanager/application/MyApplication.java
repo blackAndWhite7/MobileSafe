@@ -3,10 +3,6 @@ package com.project.wei.mobilemanager.application;
 import android.app.Application;
 import android.content.SharedPreferences;
 
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.PrintStream;
-
 /**
  * Created by Administrator on 2016/8/13 0013.
  */
@@ -21,7 +17,7 @@ public class MyApplication extends Application {
         super.onCreate();
         sharedPreferences = getSharedPreferences("config", MODE_PRIVATE);
         //处理可能发生的异常
-        Thread.currentThread().setUncaughtExceptionHandler(new MyUncaughtExceptionHandler());
+//        Thread.currentThread().setUncaughtExceptionHandler(new MyUncaughtExceptionHandler());
     }
     public static void saveBooleanToSp(String key,boolean b) {
         SharedPreferences.Editor edit = sharedPreferences.edit();
@@ -41,7 +37,7 @@ public class MyApplication extends Application {
         return sharedPreferences.getString(name,"");
     }
 
-    private class MyUncaughtExceptionHandler implements Thread.UncaughtExceptionHandler {
+ /*   private class MyUncaughtExceptionHandler implements Thread.UncaughtExceptionHandler {
         //系统中由未捕获的异常的时候调用
         //Throwable : Error和Exception的父类
         @Override
@@ -58,7 +54,7 @@ public class MyApplication extends Application {
             //自己把自己杀死
             android.os.Process.killProcess(android.os.Process.myPid());
         }
-    }
+    }*/
 
     @Override
     public void onTerminate() {

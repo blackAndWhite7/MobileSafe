@@ -47,7 +47,7 @@ public class MyTestCase extends AndroidTestCase {
     }
     public void testAddBlackNum(){
         Random random =new Random() ;
-        for(int i=0;i<200;i++) {
+        for(int i=0;i<100;i++) {
             blackNumDao.addBlackNum("123456"+i,random.nextInt(3));
         }
 
@@ -68,4 +68,5 @@ public class MyTestCase extends AndroidTestCase {
             Log.i("tag",b.toString());
         }
     }
+
 }

@@ -1,5 +1,6 @@
 package com.project.wei.mobilemanager.activity;
 
+import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -14,7 +15,6 @@ import android.os.Environment;
 import android.os.Handler;
 import android.os.Message;
 import android.os.SystemClock;
-import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
@@ -39,7 +39,7 @@ import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
 
-public class SplashActivity extends AppCompatActivity {
+public class SplashActivity extends Activity {
 
     protected static final int MSG_UPDATE_DIALOG = 1;
     protected static final int MSG_ENTER_HOME = 2;
@@ -58,7 +58,6 @@ public class SplashActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
-        getSupportActionBar().hide();
 
         tv_splash_versionname = (TextView) findViewById(R.id.tv_splash_versionname);
         tv_spalsh_plan = (TextView) findViewById(R.id.tv_spalsh_plan);

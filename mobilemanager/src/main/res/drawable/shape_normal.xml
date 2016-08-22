@@ -3,13 +3,16 @@
     android:shape="rectangle">
     <!-- shape : 设置图片的行状态      rectangle : 矩形     oval:椭圆    line:线    ring:环形-->
     <!-- corners : 弧度 -->
-    <corners android:radius="10dp"/>
+    <corners android:radius="10dp" />
     <!-- solid : 颜色 -->
-    <solid android:color="#ff0000"/>
+    <solid android:color="#ff0000" />
     <!-- stroke :　虚线　　　 dashWidth : 点的宽度   dashGap : 点之间的距离
     <stroke android:width="3dp" android:color="#00ff00" android:dashWidth="3dp" android:dashGap="5dp"/>
     -->
     <!-- gradient : 渐变   	angle : 渐变的角度-->
-    <gradient android:startColor="#0000ff" android:centerColor="#ff0000" android:endColor="#00ff00"/>
+    <gradient
+        android:centerColor="#ff0000"
+        android:endColor="#00ff00"
+        android:startColor="#0000ff" />
 
 </shape>

@@ -29,6 +29,10 @@ public class ThirdStepActivity extends BaseStepActivity {
 
     public void selectContacts(View view) {
         startActivityForResult(new Intent(this,ContactsListActivity.class),100);
+        /*第二种方法，还是第二种比较好，界面和性能都优于ListView
+        Intent intent = new Intent(Intent.ACTION_PICK, Uri.parse("content://contacts"));
+        intent.setType(ContactsContract.CommonDataKinds.Phone.CONTENT_TYPE);
+        startActivityForResult(intent,300);*/
     }
 
     @Override
@@ -37,6 +41,16 @@ public class ThirdStepActivity extends BaseStepActivity {
             String phone = data.getStringExtra("phone");
             et_thirdstep_safenumber.setText(phone);
         }
+/*      第二种方法的，显示返回的值
+        Uri uri = data.getData();
+        //利用返回的uri去联系人数据库中，查询这个联系人的信息，ContactsContract.CommonDataKinds.Phone.NUMBER属性是电话号码
+        ContentResolver contentResolver = getContentResolver();
+        Cursor query = contentResolver.query(uri, new String[]{ContactsContract.CommonDataKinds.Phone.NUMBER},
+                null, null, null);
+        query.moveToNext();
+        String string = query.getString(0);
+        et_thirdstep_safenumber.setText(string);*/
+
         super.onActivityResult(requestCode, resultCode, data);
     }
 

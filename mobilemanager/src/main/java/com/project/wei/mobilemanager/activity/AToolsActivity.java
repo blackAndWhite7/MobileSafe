@@ -53,8 +53,46 @@ public class AToolsActivity extends AppCompatActivity {
     }
 
     public void restoreSms(View view) {
-        //解析xml
-        //XmlPullParser xmlPullParser = Xml.newPullParser();
+        /*//解析xml  new File(getFilesDir(), "backupsms.xml")
+        XmlPullParser xmlPullParser = Xml.newPullParser();
+        try {
+            FileInputStream fileInputStream = new FileInputStream("/data/data/"+getPackageName()+"/files/backupsms.xml");
+            xmlPullParser.setInput(fileInputStream,"utf-8");
+            int next = xmlPullParser.next();
+            while (next != xmlPullParser.END_DOCUMENT) {
+                switch (next) {
+                    case XmlPullParser.START_DOCUMENT:
+                        break;
+                    case XmlPullParser.START_TAG:
+                        String startTagName = xmlPullParser.getName();
+                        Log.i("taggggg",startTagName);
+                        if (startTagName.equals("address")) {
+                            String addresss = xmlPullParser.nextText();
+                            Log.i("taggggg",addresss);
+                        } else if (startTagName.equals("date")) {
+                            String date = xmlPullParser.nextText();
+                            Log.i("taggggg",date);
+                        }else if (startTagName.equals("type")) {
+                            String type = xmlPullParser.nextText();
+                            Log.i("taggggg",type);
+                        }else if (startTagName.equals("body")) {
+                            String body = xmlPullParser.nextText();
+                            Log.i("taggggg",body);
+                        }
+                        break;
+
+
+                }
+            }
+
+
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (XmlPullParserException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }*/
         //插入短信
         ContentResolver resolver = getContentResolver();
         Uri uri = Uri.parse("content://sms");

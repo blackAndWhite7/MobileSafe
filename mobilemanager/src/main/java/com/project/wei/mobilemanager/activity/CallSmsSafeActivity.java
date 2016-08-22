@@ -73,6 +73,7 @@ public class CallSmsSafeActivity extends AppCompatActivity {
 
             }
         });
+
         fillData();
     }
 
