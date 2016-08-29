@@ -57,7 +57,7 @@ public class WatchDogService extends Service {
 		//动态注册 UnlockReceiver的广播事件
 		unlockReceiver = new UnlockReceiver();
 		IntentFilter intentFilter = new IntentFilter();
-		intentFilter.addAction("com.itheima.mobliesafe75.unlock");
+		intentFilter.addAction("com.project.wei.mobilemanager.unlock");
 		registerReceiver(unlockReceiver,intentFilter);
 
 		//动态注册 ScreenOffReceiver的广播事件
@@ -105,7 +105,6 @@ public class WatchDogService extends Service {
 						/*//获取任务栈栈顶的activity
 						runningTaskInfo.topActivity;*/
 						String packageName = baseactivity.getPackageName();
-						System.out.println(packageName);
 						//判断list集合中是否包含包名
 						boolean b = list.contains(packageName);
 						if (b) {
@@ -116,10 +115,8 @@ public class WatchDogService extends Service {
 								intent.putExtra("packageName", packageName);
 								startActivity(intent);
 							}
-
 						}
 					}
-					System.out.println("----------------------");
 					SystemClock.sleep(300);
 				}
 			};

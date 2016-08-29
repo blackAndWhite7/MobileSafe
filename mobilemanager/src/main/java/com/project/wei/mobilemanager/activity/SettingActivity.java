@@ -119,7 +119,8 @@ public class SettingActivity extends AppCompatActivity {
     private void lock() {
         //回显操作
         //动态的获取服务是否开启
-        if (AddressUtils.isRunningService("com.project.wei.mobilemanager.service.WatchDogService", getApplicationContext())) {
+        if (AddressUtils.isRunningService("com.project.wei.mobilemanager.service.WatchDogService",
+                getApplicationContext())) {
             //开启服务
             sv_setting_watchdog.setChecked(true);
         }else{

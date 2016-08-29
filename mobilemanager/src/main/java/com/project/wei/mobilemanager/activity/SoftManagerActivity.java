@@ -166,7 +166,8 @@ public class SoftManagerActivity extends AppCompatActivity implements View.OnCli
 
                 //contentView : 显示view对象
                 //width,height : view宽高
-                popupWindow = new PopupWindow(contentView, WindowManager.LayoutParams.WRAP_CONTENT, WindowManager.LayoutParams.WRAP_CONTENT);
+                popupWindow = new PopupWindow(contentView, WindowManager.LayoutParams.WRAP_CONTENT,
+                        WindowManager.LayoutParams.WRAP_CONTENT);
                 //动画要想执行,执行的控件必须有背景,动画都是基于背景来进行一些计算,
                 // 没有背景动画是无法执行,popuwindow默认是没有设置背景
                 popupWindow.setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));//设置透明的背景
@@ -178,7 +179,8 @@ public class SoftManagerActivity extends AppCompatActivity implements View.OnCli
                 int y = location[1];
                 //parent : 要挂载在那个控件上
                 //gravity,x,y : 控制popuwindow显示的位置
-                popupWindow.showAtLocation(parent, Gravity.LEFT | Gravity.TOP, x+ DensityUtil.dip2qx(getApplicationContext(),65), y);
+                popupWindow.showAtLocation( parent , Gravity.LEFT | Gravity.TOP,
+                        x+ DensityUtil.dip2px(getApplicationContext(),65), y);
 
                 //6.设置动画
                 //缩放动画
@@ -336,7 +338,7 @@ public class SoftManagerActivity extends AppCompatActivity implements View.OnCli
                 viewHolder.tv_softmanager_issd = (TextView) view.findViewById(R.id.tv_softmanager_issd);
                 viewHolder.tv_softmanager_version = (TextView) view.findViewById(R.id.tv_softmanager_version);
                 viewHolder.iv_itemsoftmanager_islock = (ImageView) view.findViewById(R.id.iv_itemsoftmanager_islock);
-                //将viewholer和view对象绑定
+                //将view和viewholder对象绑定
                 view.setTag(viewHolder);
             }
 
@@ -458,7 +460,8 @@ public class SoftManagerActivity extends AppCompatActivity implements View.OnCli
         Intent intent = new Intent();
         intent.setAction("android.intent.action.SEND");
         intent.setType("text/plain");
-        intent.putExtra(Intent.EXTRA_TEXT, "发现一个很牛x软件:"+appInfo.getName()+",下载地址:www.baidu.com,自己去搜");
+        intent.putExtra(Intent.EXTRA_TEXT, "发现一个很牛x软件:"+appInfo.getName()+"," +
+                "下载地址:www.baidu.com,自己去搜");
         startActivity(intent);
     }
 

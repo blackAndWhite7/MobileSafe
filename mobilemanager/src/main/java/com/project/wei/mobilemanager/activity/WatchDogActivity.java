@@ -81,7 +81,7 @@ public class WatchDogActivity extends AppCompatActivity {
             //解锁
             //一般通过广播的形式将信息发送给服务
             Intent intent = new Intent();
-            intent.setAction("com.itheima.mobliesafe75.unlock");//自定义发送广播事件
+            intent.setAction("com.project.wei.mobilemanager.unlock");//自定义发送广播事件
             intent.putExtra("packagename", packagename);
             sendBroadcast(intent);
             finish();
