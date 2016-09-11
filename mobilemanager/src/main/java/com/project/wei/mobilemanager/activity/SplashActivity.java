@@ -138,11 +138,10 @@ public class SplashActivity extends Activity {
     Handler handler = new Handler() {
         @Override
         public void handleMessage(Message msg) {
-            super.handleMessage(msg);
             switch (msg.what) {
                 case MSG_UPDATE_DIALOG:
                     //弹出对话框
-                    showdialog();
+                    showDialog();
                     break;
                 case MSG_ENTER_HOME:
                     enterHome();
@@ -172,7 +171,7 @@ public class SplashActivity extends Activity {
     /**
      * 弹出对话框
      */
-    protected void showdialog() {
+    protected void showDialog() {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         //设置对话框不能消失
         builder.setCancelable(false);
@@ -380,7 +379,8 @@ public class SplashActivity extends Activity {
         try {
             //根据包名获取清单文件中的信息,其实就是返回一个保存有清单文件信息的javabean
             //packageName :应用程序的包名
-            //flags : 指定信息的标签,0:获取基础的信息,比如包名,版本号,要想获取权限等等信息,必须通过标签来指定,才能去获取
+            //flags : 指定信息的标签,0:获取基础的信息,比如包名,版本号,要想获取权限等等信息,
+            // 必须通过标签来指定,才能去获取
             //GET_PERMISSIONS : 标签的含义:处理获取基础信息之外,还会额外获取权限的信息
             //getPackageName() : 获取当前应用程序的包名
             PackageInfo packageInfo = pm.getPackageInfo(getPackageName(), 0);

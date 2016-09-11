@@ -88,7 +88,7 @@ public abstract class BaseStepActivity extends AppCompatActivity {
     //event : 按键的处理事件
     public boolean onKeyDown(int keyCode, KeyEvent event) {
         //判断keycode是否是返回键的标示
-        if (keyCode == event.KEYCODE_BACK) {
+        if (keyCode == KeyEvent.KEYCODE_BACK) {
             pre_activity();
             overridePendingTransition(R.anim.pre_enter,R.anim.pre_exit);
             //true:是可以屏蔽按键的事件，就是你按键没有反应，

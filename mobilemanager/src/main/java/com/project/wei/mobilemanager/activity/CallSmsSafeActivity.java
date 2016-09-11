@@ -54,7 +54,7 @@ public class CallSmsSafeActivity extends AppCompatActivity {
             @Override
             public void onScrollStateChanged(AbsListView view, int scrollState) {
                 //当listview静止的时候判断界面显示的最后一个条目是否是查询数据的最后一个条目,
-                // 是加载下一波数据,不是用户进行其他操作
+                // 是:加载下一波数据,不是:用户进行其他操作
                 if (scrollState == SCROLL_STATE_IDLE) {
                     //获取界面显示最后一个条目,返回的时候条目的位置
                     int lastVisiblePosition = lv_callsmssafe_blacknum.getLastVisiblePosition();

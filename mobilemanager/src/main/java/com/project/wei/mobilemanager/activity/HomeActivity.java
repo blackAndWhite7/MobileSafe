@@ -49,28 +49,28 @@ public class HomeActivity extends AppCompatActivity {
                         }
                         break;
                     case 1:
-                        startActivity(new Intent(HomeActivity.this,CallSmsSafeActivity.class));
+                        startActivity(new Intent(HomeActivity.this, CallSmsSafeActivity.class));
                         break;
                     case 2:
-                        startActivity(new Intent(HomeActivity.this,SoftManagerActivity.class));
+                        startActivity(new Intent(HomeActivity.this, SoftManagerActivity.class));
                         break;
                     case 3:
-                        startActivity(new Intent(HomeActivity.this,TaskManagerActivity.class));
+                        startActivity(new Intent(HomeActivity.this, TaskManagerActivity.class));
                         break;
                     case 4:
-                        startActivity(new Intent(HomeActivity.this,RocketActivity.class));
+                        startActivity(new Intent(HomeActivity.this, RocketActivity.class));
                         break;
                     case 5:
-                        startActivity(new Intent(HomeActivity.this,AntivirusActivity.class));
+                        startActivity(new Intent(HomeActivity.this, AntivirusActivity.class));
                         break;
                     case 6:
-                        startActivity(new Intent(HomeActivity.this,ClearCacheActivity.class));
+                        startActivity(new Intent(HomeActivity.this, ClearCacheActivity.class));
                         break;
                     case 7:
-                        startActivity(new Intent(HomeActivity.this,AToolsActivity.class));
+                        startActivity(new Intent(HomeActivity.this, AToolsActivity.class));
                         break;
                     case 8://设置中心
-                        startActivity(new Intent(HomeActivity.this,SettingActivity.class)) ;
+                        startActivity(new Intent(HomeActivity.this, SettingActivity.class));
                         break;
                 }
             }
@@ -78,6 +78,7 @@ public class HomeActivity extends AppCompatActivity {
     }
 
     boolean status = true;
+
     private void showEnterPassWordDialog() {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setCancelable(false);
@@ -112,7 +113,7 @@ public class HomeActivity extends AppCompatActivity {
                 String password_sp = MyApplication.getStringFromSp("password");
 
                 if (MD5Util.passwordMD5(password).equals(password_sp)) {
-                    startActivity(new Intent(HomeActivity.this,PhoneBakActivity.class));
+                    startActivity(new Intent(HomeActivity.this, PhoneBakActivity.class));
                     alertDialog.dismiss();
                     Toast.makeText(getApplicationContext(), "密码正确", Toast.LENGTH_LONG).show();
                 } else {
@@ -172,11 +173,12 @@ public class HomeActivity extends AppCompatActivity {
     }
 
     private class Myadapter extends BaseAdapter {
-        int[] imageId = { R.drawable.safe, R.drawable.callmsgsafe, R.drawable.app,
+        int[] imageId = {R.drawable.safe, R.drawable.callmsgsafe, R.drawable.app,
                 R.drawable.taskmanager, R.drawable.netmanager, R.drawable.trojan,
-                R.drawable.sysoptimize, R.drawable.atools, R.drawable.settings };
-        String[] names = { "手机防盗", "通讯卫士", "软件管理", "进程管理", "流量统计", "手机杀毒", "缓存清理",
-                "高级工具", "设置中心" };
+                R.drawable.sysoptimize, R.drawable.atools, R.drawable.settings};
+        String[] names = {"手机防盗", "通讯卫士", "软件管理", "进程管理", "流量统计", "手机杀毒", "缓存清理",
+                "高级工具", "设置中心"};
+
         // 设置条目的个数
         @Override
         public int getCount() {
@@ -190,7 +192,7 @@ public class HomeActivity extends AppCompatActivity {
             View view = View.inflate(getApplicationContext(), R.layout.item_home, null);
             //每个条目的样式都不一样,初始化控件,去设置控件的值
             //view.findViewById是从item_home布局文件中找控件,findViewById是从activity_home中找控件
-            ImageView iv_itemhome_icon = (ImageView)view.findViewById(R.id.iv_itemhome_icon);
+            ImageView iv_itemhome_icon = (ImageView) view.findViewById(R.id.iv_itemhome_icon);
             TextView tv_itemhome_text = (TextView) view.findViewById(R.id.tv_itemhome_text);
             //设置控件的值
             iv_itemhome_icon.setImageResource(imageId[position]);//给imageview设置图片,根据条目的位置从图片数组中获取相应的图片

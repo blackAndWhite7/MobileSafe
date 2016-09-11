@@ -260,11 +260,11 @@ public class AddressService extends Service {
      */
     public void hideToast(){
         if (windowManager != null && view!= null) {
-            windowManager.removeView(view);//移出控件
-            windowManager= null;
-            view=null;
-        }
+        windowManager.removeView(view);//移出控件
+        windowManager= null;
+        view=null;
     }
+}
 
 
 }

@@ -76,7 +76,7 @@ public class AntivirusActivity extends AppCompatActivity {
         new Thread(){
             public void run() {
                 //延迟一秒中扫描程序
-                SystemClock.sleep(100);
+                SystemClock.sleep(1000);
                 //2.获取所有安装应用程序信息
                 List<PackageInfo> installedPackages = pm.getInstalledPackages(PackageManager.GET_SIGNATURES);
 

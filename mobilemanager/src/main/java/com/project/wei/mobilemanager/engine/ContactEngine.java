@@ -16,7 +16,7 @@ import java.util.List;
  */
 public class  ContactEngine {
     public static List<HashMap<String, String>> getAllContactsInfo(Context context) {
-        SystemClock.sleep(2000);
+        SystemClock.sleep(1000);
         //创建一个ArrayList集合存放查询出的联系人
         ArrayList<HashMap<String ,String >> list  =new ArrayList<HashMap<String ,String >>();
 
@@ -68,7 +68,9 @@ public class  ContactEngine {
         cursor.close();
         return list;
     }
-  /* private static List<Map<String,String>> wholeContacts = new ArrayList<Map<String, String>>();
+  /*
+    //  一个 white 循环即可解决
+  private static List<Map<String,String>> wholeContacts = new ArrayList<Map<String, String>>();
 
     public static List<Map<String,String>> getAllContacts(Context context){
 
